@@ -5,7 +5,7 @@ const fs = require('fs'),
       appPort = process.env.PORT || '3000',
       logFolder = 'log_files/',
       logExtension = '.log',
-      apiKeys = ['n6b7rbi6x21ez3dlkp']//Temp api key db
+      apiKeys = ['n6b7rbi6x21ez3dlkp', 'tucn8493qtyp8m9y4c']//Temp api key db
 
 //Create log folder if doesn't exist
 if (!fs.existsSync(logFolder)){
