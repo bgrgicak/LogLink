@@ -2,7 +2,7 @@ var express = require('express'),
     app = express(),
     http = require('http').Server(app)
 const fs = require('fs'),
-      appPort = '3000',
+      appPort = process.env.PORT || '3000',
       logFolder = 'log_files/',
       logExtension = '.log',
       apiKeys = ['n6b7rbi6x21ez3dlkp']//Temp api key db
@@ -50,6 +50,6 @@ app.get('/:log/:text/:key', function (req, res) {
     res.send("Wrong api key")
   }
 })
-/*http.listen(appPort, function(){
+http.listen(appPort, function(){
   console.log('listening on *:' + appPort)
-})*/
+})
