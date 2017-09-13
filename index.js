@@ -50,6 +50,6 @@ app.get('/:log/:text/:key', function (req, res) {
     res.send("Wrong api key")
   }
 })
-http.listen(appPort, function(){
+/*http.listen(appPort, function(){
   console.log('listening on *:' + appPort)
-})
+})*/
