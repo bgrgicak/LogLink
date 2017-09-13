@@ -15,3 +15,6 @@ Clear log url:
 
 Check if log exists url:
 /LOG_NAME/exists/API_KEY
+
+#TODO
+Api key register and api key storage
