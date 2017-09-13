@@ -21,13 +21,14 @@ function isValidApiKey(apiKey){
   }
   return false
 }
+
 //Generata file path based on file name
 function filePath(fileName){
   return logFolder + fileName + logExtension
 }
 
 //Get log content
-app.get('/:log/:key', function(req, res){
+app.get('/:log/get/:key', function(req, res){
   if(isValidApiKey(req.params.key)){
     res.set('Content-Type', 'text/plain')
     fs.exists(filePath(req.params.log), function(exists){
@@ -48,7 +49,7 @@ app.get('/:log/:key', function(req, res){
 })
 
 //Add line to log
-app.get('/:log/:text/:key', function (req, res) {
+app.get('/:log/set/:text/:key', function (req, res) {
   if(isValidApiKey(req.params.key)){
     res.set('Content-Type', 'text/plain')
     fs.appendFile(filePath(req.params.log), req.params.text + "\r\n", function(err) {
