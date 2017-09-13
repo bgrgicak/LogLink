@@ -15,6 +15,16 @@ app.get('/:log/get/:key', function(req, res){
   }
 })
 
+
+//Get last n lines from log
+app.get('/:log/get/:last/:key', function(req, res){
+  if(api.isValidApiKey(req.params.key)){
+    logLink.get(req, res, req.params.last)
+  }else{
+    res.send('Wrong api key')
+  }
+})
+
 //Add line to log
 app.get('/:log/set/:text/:key', function (req, res) {
   if(api.isValidApiKey(req.params.key)){

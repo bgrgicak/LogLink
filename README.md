@@ -7,10 +7,11 @@ Add new line to log url:
 Get log url:
 /LOG_NAME/get/API_KEY
 
-# TODO
-
 Get log last N lines url:
 /LOG_NAME/get/N/API_KEY
 
-Get log from line N to line M lines url:
-/LOG_NAME/get/N/M/API_KEY
+Clear log url:
+/LOG_NAME/clear/API_KEY
+
+Check if log exists url:
+/LOG_NAME/exists/API_KEY
